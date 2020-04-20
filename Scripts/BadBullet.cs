@@ -43,7 +43,8 @@ public class BadBullet : MonoBehaviour
             if (plr == true)
             {
                 plr.TakeDamage(mass);
-                Instantiate(BadImpactEffect, transform.position, Quaternion.identity);
+                GameObject gg = Instantiate(BadImpactEffect, transform.position, Quaternion.identity);
+                Destroy(gg, 2f);
                 Destroy(gameObject);
             }
         }
